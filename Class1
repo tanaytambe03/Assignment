@@ -1,0 +1,65 @@
+print("Good evening all")
+
+# collection datatypes in Python
+# list , tuple, set , dictionary
+# list-> ordered collection of datatypes,[],mutable(changeable)
+
+mylist=["Data","Details","Access"] 
+mylist1=[366,476.0,True,"Data"]
+print(mylist1)
+
+# Update
+mylist1[2]=False
+print(mylist1)
+
+# Append 
+mylist1.append("data1")
+print(mylist1)
+
+#Insert
+mylist1.insert(1000,300)
+print(mylist1)
+
+# delete
+del mylist1[5]
+print(mylist1)
+
+mylist1.remove("Data")
+print(mylist1)
+
+#Dictionary : it consists of key and the values
+
+Dict={
+    "Username":["Admin","Admin1"],
+      "Password":"Pass",
+      "Os":"windows",
+      "Ram":"128GB"
+    
+}
+print(Dict["Username"])
+
+#update
+Dict["Password"]=32667
+print(Dict)
+
+del Dict["Os"]
+print(Dict)
+
+# index number-> prints individual elements 
+#Slicing ->printing the sequence of elements
+
+a="randomness"
+print(a[0:100])
+print(a[3:])
+print(a[:3])
+print(a[-9:-1])
+
+#step index
+
+b="Python"
+# print(b[1])
+# print(b[2])
+print(b[::-2])
+
+a="randomness"
+print(a[-10:])
