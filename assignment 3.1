@@ -1,17 +1,79 @@
-!----note----!
-with open("file.txt","r") as file1:
-print(file1.read())
-
-
-#Modules
-import math
-print(math.pi) //3.14159678685
-
-import datetime
-x=datatime.datetime.now()
-print(x)
-
-
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# r+\n",
+    "with open('python_assignment3.txt','r+') as f:\n",
+    "    f.write(\"new line \\n\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "test 1\n",
+      "test 2\n",
+      "test 3\n",
+      "\n"
+     ]
+    }
+   ],
+   "source": [
+    "# w+\n",
+    "with open('python_assignment3.txt', 'w+') as f:   # create a new file or truncates it\n",
+    "    f.write(\"test 1\\n\")\n",
+    "    f.write(\"test 2\\n\")\n",
+    "    f.write(\"test 3\\n\")             # now the file pointer is at the end\n",
+    "    f.seek(0)                       # move the file pointer to the beginning\n",
+    "    lines = f.read()                # read it, now we can read!\n",
+    "    print(lines)  "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# a+\n",
+    "with open('file.txt', 'a+') as f:\n",
+    "    f.seek(0)                       # file pointer at end, move to beginning\n",
+    "    lines = f.readlines()           # read all and file pointer at end again\n",
+    "    f.write(\"\\n\" + str(len(lines))) # append number of lines to a file\n"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.8.3"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 4
+}
 
 
 
