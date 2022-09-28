@@ -1,0 +1,23 @@
+#Class is a blueprint
+
+class event()
+  processor="Intel5"
+  display="Hello my self tanay"
+ event.processor="I7"
+ #instance attribute
+def __init__(self, color):
+self.color=color
+
+  object1=event()
+  object2=event()
+  print(object1.display)
+  print(object2.processor)
+  
+
+myobj1=event("red")
+print(object2.processor,myobj1.color)
+
+  
+  
+  
+  
